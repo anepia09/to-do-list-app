@@ -1,0 +1,36 @@
+{
+  "name": "my-todo-app",
+  "version": "1.0.0",
+  "description": "My To-Do List Desktop App",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build-win": "electron-builder --win",
+    "build-mac": "electron-builder --mac"
+  },
+  "build": {
+    "appId": "com.mytodo.app",
+    "productName": "My To-Do List",
+    "files": [
+      "main.js",
+      "todo-list.html",
+      "*.jpg",
+      "*.png",
+      "*.jpeg",
+      "*.gif",
+      "*.webp"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "icon.ico"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "icon.icns"
+    }
+  },
+  "devDependencies": {
+    "electron": "^29.0.0",
+    "electron-builder": "^24.0.0"
+  }
+}

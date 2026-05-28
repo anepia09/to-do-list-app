@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My To-Do List</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <div class="app">
+    <div class="image-banner">
+      <img src="gojo.jpg" alt="banner"/>
+    </div>
+
+    <div class="header">
+      <div class="header-dot dot-red"></div>
+      <div class="header-dot dot-yellow"></div>
+      <div class="header-dot dot-green"></div>
+      <div class="header-title">My To-Do List</div>
+      <button class="close-btn" onclick="window.close()" aria-label="Close app">✕</button>
+    </div>
+
+    <div class="stats">
+      <div class="stat">Total: <span id="total-count">0</span></div>
+      <div class="stat stat-done">Done: <span id="done-count">0</span></div>
+      <div class="stat">Left: <span id="left-count">0</span></div>
+    </div>
+
+    <div class="input-area">
+      <input class="todo-input" id="todo-input" type="text" placeholder="Add a new task..." maxlength="80" />
+      <button class="add-btn" id="add-btn">+ ADD</button>
+    </div>
+
+    <div class="list" id="todo-list"></div>
+
+    <div class="footer">
+      <button class="clear-btn" id="clear-btn">Clear Done</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
